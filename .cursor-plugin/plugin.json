@@ -1,13 +1,13 @@
 {
-  "name": "scaledpapers",
-  "displayName": "ScaledPapers",
+  "name": "quickstatus",
+  "displayName": "QuickStatus",
   "version": "1.0.0",
   "description": "Uptime checks and a public status page for a website or API.",
   "author": {
-    "name": "ScaledPapers"
+    "name": "QuickStatus"
   },
-  "homepage": "https://scaledpapers.com",
-  "repository": "https://github.com/ScaledPapers/skills",
+  "homepage": "https://quickstatus.dev",
+  "repository": "https://github.com/QuickStatusHQ/skills",
   "license": "MIT",
   "keywords": ["monitoring", "status-page", "uptime", "mcp"],
   "variables": {
@@ -16,7 +16,7 @@
       "SP_API_KEY": {
         "type": "string",
         "title": "API key",
-        "description": "Workspace API key from https://scaledpapers.com/app/api-keys. Starts with sp_."
+        "description": "Workspace API key from https://quickstatus.dev/app/api-keys. Starts with sp_."
       }
     },
     "required": ["SP_API_KEY"]
