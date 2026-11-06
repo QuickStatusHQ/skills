@@ -3,23 +3,23 @@ name: uptime-status-page
 description: "Uptime checks and a public status page for a website or API. Use when the user asks to monitor a health URL, see if a site is down, set up a status page, open an incident, or schedule maintenance."
 ---
 
-# ScaledPapers
+# QuickStatus
 
-ScaledPapers probes a website, API, DNS name, or TCP host. A website check is up when the HTTP status is below 500. An API check is up on 200 unless the user set another code. A DNS check is up when the lookup succeeds. A TCP check is up when the connection succeeds, or when it fails if the user asked for that. Timeouts and other failures count as down.
+QuickStatus probes a website, API, DNS name, or TCP host. A website check is up when the HTTP status is below 500. An API check is up on 200 unless the user set another code. A DNS check is up when the lookup succeeds. A TCP check is up when the connection succeeds, or when it fails if the user asked for that. Timeouts and other failures count as down.
 
 The same workspace publishes a status page, opens incidents, and schedules maintenance. Subscriber email goes out only when the user asks.
 
-Setup for an agent: https://scaledpapers.com/agent-setup/prompt.md. Human guide: https://scaledpapers.com/docs/mcp.
+Setup for an agent: https://quickstatus.dev/agent-setup/prompt.md. Human guide: https://quickstatus.dev/docs/mcp.
 
 ## Install
 
 ```bash
-npx skills add ScaledPapers/skills --skill uptime-status-page -a claude-code -a codex -g -y
+npx skills add QuickStatusHQ/skills --skill uptime-status-page -a claude-code -a codex -g -y
 ```
 
 ## Connect
 
-1. If `SP_API_KEY` is already set and starts with `sp_`, keep it. Otherwise ask once. An owner or admin creates the key at https://scaledpapers.com/app/api-keys.
+1. If `SP_API_KEY` is already set and starts with `sp_`, keep it. Otherwise ask once. An owner or admin creates the key at https://quickstatus.dev/app/api-keys.
 2. Export it in the shell. Never write the raw key into a committed file, and never print it back.
 3. Wire MCP for the agent you are (idempotent). From this skill folder:
 

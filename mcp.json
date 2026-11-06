@@ -1,7 +1,7 @@
 {
   "mcpServers": {
-    "scaledpapers": {
-      "url": "https://api.scaledpapers.com/mcp",
+    "quickstatus": {
+      "url": "https://api.quickstatus.dev/mcp",
       "headers": {
         "Authorization": "Bearer ${SP_API_KEY}"
       }
