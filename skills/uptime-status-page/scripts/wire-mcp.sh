@@ -53,16 +53,17 @@ PY
 wire_claude() {
   if ! command -v claude >/dev/null 2>&1; then
     echo "Claude Code CLI not found. Run:" >&2
-    echo "  claude mcp add --transport http quickstatus ${MCP_URL} \\" >&2
-    echo '    --header "Authorization: Bearer ${SP_API_KEY}"' >&2
+    echo "  claude mcp add -s user --transport http quickstatus ${MCP_URL} \\" >&2
+    echo "    --header 'Authorization: Bearer \${SP_API_KEY}'" >&2
     return 1
   fi
-  if claude mcp add --transport http quickstatus "$MCP_URL" \
-    --header "Authorization: Bearer \${SP_API_KEY}" 2>/dev/null; then
-    echo "Claude Code: registered quickstatus MCP"
-  else
-    echo "Claude Code: quickstatus MCP already registered or add failed (check claude mcp list)"
+  if claude mcp get quickstatus >/dev/null 2>&1; then
+    echo "Claude Code: quickstatus MCP already registered"
+    return 0
   fi
+  claude mcp add -s user --transport http quickstatus "$MCP_URL" \
+    --header "Authorization: Bearer \${SP_API_KEY}" || return 1
+  echo "Claude Code: registered quickstatus MCP for all projects"
 }
 
 case "${1:-}" in

@@ -1,15 +1,15 @@
 {
   "name": "quickstatus",
   "displayName": "QuickStatus",
-  "version": "1.0.0",
-  "description": "Uptime checks and a public status page for a website or API.",
+  "version": "1.1.0",
+  "description": "Uptime checks, Linux server monitoring, and a public status page.",
   "author": {
     "name": "QuickStatus"
   },
   "homepage": "https://quickstatus.dev",
   "repository": "https://github.com/QuickStatusHQ/skills",
   "license": "MIT",
-  "keywords": ["monitoring", "status-page", "uptime", "mcp"],
+  "keywords": ["monitoring", "status-page", "uptime", "mcp", "server-monitoring"],
   "variables": {
     "type": "object",
     "properties": {

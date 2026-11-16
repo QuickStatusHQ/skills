@@ -1,6 +1,6 @@
 # QuickStatus skill
 
-A website check is up when the HTTP status is below 500. An API check is up on 200 unless another code is set. DNS is up when the lookup succeeds. TCP is up when the connection succeeds, or when it fails if that was the expected outcome. The same workspace publishes a status page, opens incidents, and schedules maintenance. [QuickStatus](https://quickstatus.dev).
+A website check is up when the HTTP status is below 500. An API check is up on 200 unless another code is set. DNS is up when the lookup succeeds. TCP is up when the connection succeeds, or when it fails if that was the expected outcome. A server check watches Linux machines from the inside with the [server agent](https://quickstatus.dev/docs/server-agent): the agent creates the check, runs the install command when it has a root shell (after asking), and finishes when the first report arrives. The same workspace publishes a status page, opens incidents, and schedules maintenance. [QuickStatus](https://quickstatus.dev).
 
 The server is `https://api.quickstatus.dev/mcp`. It uses a workspace API key (`SP_API_KEY`), not OAuth. Create the key at https://quickstatus.dev/app/api-keys. Setup steps: https://quickstatus.dev/docs/mcp.
 
